@@ -12,6 +12,7 @@ public class BookController : ControllerBase
     public async Task<IActionResult> Create()
     {
         var book = Book.Create("Idiot", 2.99);
+        book.Updated(5.50);
         return Ok(book);
     }
 }
